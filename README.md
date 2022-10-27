@@ -2,7 +2,7 @@
 ## EL4106 - Inteligencia Computacional
 
 ### Integrantes:
-Benjamín Castro R.
+Benjamín Castro R.\n
 Jordan Pérez D.
 
 ### Ayudante:
