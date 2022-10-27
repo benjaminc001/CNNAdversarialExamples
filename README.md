@@ -2,7 +2,7 @@
 ## EL4106 - Inteligencia Computacional
 
 ### Integrantes:
-Benjamín Castro R.\n
+Benjamín Castro R.\\
 Jordan Pérez D.
 
 ### Ayudante:
@@ -21,5 +21,6 @@ En primer lugar, abra el archivo en una terminal de **Google Colab**, donde debe
 #### Implementación de ataque FGSM:
 El código tiene tres componentes principales: una que corresponde a la carga y normalización del *dataset* MNIST, otra que es la función que genera las imágenes perturbadas mediante ataque FGSM (en función de una imagen, un gradiente y un valor $\epsilon$) y la última que corresponde a la función para probar el comportamiento del modelo pre entrenado con respecto a los datos (función *test*).
 
+Los datos se cargan con un *loader*, el cual funciona como un iterable para *test*  
 
 ### 2. Generación de ejemplos con método PGD (archivo )
