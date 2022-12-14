@@ -2,8 +2,7 @@
 ## EL4106 - Inteligencia Computacional
 
 ### Integrantes:
-Benjamín Castro R.\\
-Jordan Pérez D.
+Benjamín Castro R. y Jordan Pérez D.
 
 ### Ayudante:
 Andrés González
@@ -31,4 +30,12 @@ El código muestra un introducción al problema de ataques adversarios mediante 
 Luego de la introducción, carga el *dataset* MNIST, el modelo pre-entrenado **Le-Net** y sus respectivos pesos. Además, define en una función el método de ataque PGD con las variables de imagen $X$, la etiqueta $y$ con la que se desea confundir al modelo; el parámetro $\varepsilon$ que controla el intervalo entre el cual está acotada la perturbación, el paso de iteración $\alpha$ y el número de iteraciones. Retorna la perturbación y el valor de la pérdida luego de aplicar *backpropagation* en las iteraciones. 
 
 Las función de evaluación del modelo corresponde a la de cálculo de *accuracy*, la cual compara las predicciones con datos perturbados con respecto a las etiquetas reales. Además, se muestra una visualización de los datos post-evaluación del modelo con ejemplos generados por la función y los gráficos de *accuracy* en función de $\varepsilon$.
+### 3. Entrenamiento adversario (archivo *Adv_training.ipynb*)
+Se presenta el *dataset* de CIFAR-10, el modelo pre-entrenado ResNet 18 y dos funciones de épocas, una normal, donde se introduce el *dataloader* correspondiente y el modelo, y otra adversaria, donde además se puede cargar el ataque (FGSM o PGD). Se corren las celdas correspondientes para poder ver el efecto que tiene el entrenamiento adversario en el desempeño del modelo. Se pueden ir cambiando los hiperparámetros de los ataques para medir su funcionamiento, además, se recomienda dejar constante el número de épocas de entrenamiento, debido a que esto optimiza el tiempo en el que se corre el archivo. Con esta cantidad se logra lo necesario que se quiere demostrar: el entrenamiento adversario supera al entrenamiento normal para los ejemplos adversarios.
 
+**Es recomendable usar GPU para esta parte.**
+
+### 4. Ataque a caja negra (archivo *BlackBoxAttack.ipynb*)
+Abrir el archivo en una terminal de **Google Colab** y cargar los labels de ImageNet presentes en la carpeta de *Intro_and_PGD*. Cuando se tienen listos, se presenta un modelo de caja negra (se descarga en el mismo terminal) y se pueden ir cargando imágenes para poder observar las predicciones de este modelo y los *labels* con los que este clasifica. 
+
+Por otro lado, se cargan modelos pre-entrenados ResNet 50 y VGG-16 (sustitutos), con los que también se pueden cargar imágenes para comparar las predicciones con respecto a la caja negra. Se deben correr las celdas de manera individual, donde está detallado por sección qué es lo que hace cada celda.
